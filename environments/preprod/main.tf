@@ -1,12 +1,9 @@
-variable "rgs" {}
-variable "storage_accounts" {}
-
 module "resource_group" {
-   source = "../../module/azure_resource_group"
-   resource_groups = var.rgs
+  source          = "../../module/azure_resource_group"
+  resource_groups = var.rgs
 }
 
 module "storage_account" {
-    source = "../../module/azurerm_storage_account"
-    storage_accounts = var.storage_accounts
+  source           = "../../module/azurerm_storage_account"
+  storage_accounts = var.storage_accounts
 }
